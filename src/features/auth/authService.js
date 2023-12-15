@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/users/'
+//const API_URL = 'http://localhost:5000/api/users/'
+const API_URL = 'https://faithful-rose-katydid.cyclic.app/api/users/'
 
 //login un usuario
 const login = async (userData) => {

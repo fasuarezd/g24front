@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/tareas/'
+//const API_URL = 'http://localhost:5000/api/tareas/'
+const API_URL = 'https://faithful-rose-katydid.cyclic.app/api/tareas/'
 
 //crear una tarea
 const crearTarea = async (tareaData, token) => {
