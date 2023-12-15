@@ -14,8 +14,34 @@ const crearTarea = async (tareaData, token) => {
     return response.data
 }
 
+//obtener lista de tareas del usuario
+const getTareas = async (token) => {
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    }
+    const response = await axios.get(API_URL, config)
+
+    return response.data
+}
+
+//borrar una tarea
+const deleteTarea = async (idtarea, token) => {
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    }
+    const response = await axios.delete(API_URL + idtarea, config)
+
+    return response.data
+}
+
 const tareaService = {
-    crearTarea
+    crearTarea,
+    getTareas,
+    deleteTarea
 }
 
 export default tareaService
